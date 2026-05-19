@@ -1,0 +1,275 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 50px 0 0;
+  transition: var(--transition);
+}
+
+.header.active {
+  background: var(--white);
+  padding: 20px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.navbar .logo img {
+  width: 100%;
+  max-width: 198px;
+  height: auto;
+}
+
+
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+
+.navMenu ul {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+
+.navMenu ul li a {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--black-opacity);
+  text-transform: uppercase;
+  transition: var(--transition);
+  font-family: var(--font-montserrat);
+}
+
+
+
+
+
+.authBtn a {
+  border: 1px solid var(--black-opacity);
+  padding: 19px 32px;
+  border-radius: 50px;
+  color: var(--black-opacity);
+  transition: var(--transition);
+  font-family: var(--font-montserrat);
+}
+
+.header.active .authBtn a {
+  color: var(--black);
+  border-color: var(--border);
+}
+
+
+
+.toggleBtn {
+  width: 30px;
+  height: 30px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.toggleBtn span {
+  width: 100%;
+  height: 3px;
+  background: var(--black);
+  transition: 0.3s ease;
+}
+
+.header.active .toggleBtn span {
+  background: var(--black);
+}
+
+
+
+.closeBtn {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.closeBtn span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 26px;
+  height: 2px;
+  background:var(--white);
+}
+
+.closeBtn span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.closeBtn span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@media screen and (max-width:1800px){
+  .menu {
+  gap: 36px;
+}
+.authBtn a {
+  padding: 18px 28px;
+}
+
+
+}
+
+@media screen and (max-width:1600px){
+   .navMenu ul {
+    gap: 20px;
+  }
+  .navMenu ul li a {
+    font-size: 20px;
+  }
+  .menu {
+  gap: 28px;
+}
+.authBtn a {
+  padding: 16px 24px;
+  font-size: 16;
+}
+.navbar .logo img {
+  max-width: 160px;
+}
+}
+@media screen and (max-width:1440px){
+  .navMenu ul li a {
+    font-size: 18px;
+  }
+  .menu {
+  gap: 24px;
+}
+.authBtn a {
+  padding: 16px 20px;
+}
+.navbar .logo img {
+  max-width: 140px;
+}
+}
+@media screen and (max-width:1199px){
+  .navMenu ul li a {
+    font-size: 16px;
+  }
+   .navMenu ul {
+    gap: 12px;
+  }
+  .menu {
+  gap: 20px;
+}
+.authBtn a {
+  padding: 16px 18px;
+}
+}
+@media screen and (max-width:991px){
+}
+@media screen and (max-width:767px){
+
+}
+@media screen and (max-width:575px){
+  .toggleBtn {
+  width: 24px;
+  height:24px;
+}
+
+}
+@media screen and (max-width:430px){
+  
+}
+
+@media screen and (max-width:320px){
+  
+}
+
+@media screen and (max-width: 991px) {
+  .toggleBtn {
+    display: flex;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 340px;
+    height: 100vh;
+    background: var(--black);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+    padding: 100px 30px 40px;
+    transition: 0.5s ease;
+    z-index: 999;
+  }
+
+  .showMenu {
+    left: 0;
+  }
+
+  .closeBtn {
+    display: block;
+  }
+
+  .navMenu {
+    width: 100%;
+  }
+
+  .navMenu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .navMenu ul li a {
+    font-size: 14px;
+    color: var(--white);
+  }
+
+  .authBtn a {
+    border-color: var(--dark-gray);
+    color: var(--white) !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 20px 0;
+  }
+
+  .menu {
+    width: 100%;
+    padding: 90px 24px 30px;
+  }
+
+  .logo img {
+    max-width: 150px;
+  }
+
+  
+  .authBtn a {
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+}

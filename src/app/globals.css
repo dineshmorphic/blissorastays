@@ -1,0 +1,416 @@
+:root{
+  --white:#ffffff;
+  --black:#000000;
+  --black-opacity:#00000080;
+  --light-black:#0000001A;
+  --white-opacity:#ffffff80;
+  --text:#5f5f5f;
+  --gray:#f3f3f3;
+  --light-pink:#F9FAFC;
+  --border:#d8d8d8;
+  --light-gray:#EAEDF2;
+  --border-02:#E3E4E7;
+  --dark-gray:#808080;
+  --icon-grey-color:#BDC3CE;
+  --light-sky-border:#E3E4E7;
+  --overlay:linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 90%);
+;
+
+  --transition:all 0.3s ease-in-out;
+
+  --container:1720px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+ font-family:var(--font-montserrat);
+  background:var(--white);
+  color:var(--black);
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+ul{
+  list-style:none;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+
+.paddingBlock{
+  padding-block: 100px;
+}
+/* =========================
+TYPOGRAPHY
+========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6{
+   font-family:var(--font-playfair);
+  line-height:1.2;
+  color:var(--black);
+}
+
+h1,
+.h1{
+  font-size:66px;
+  font-weight:500;
+}
+
+h2,
+.h2{
+  font-size:44px;
+  font-weight:500;
+}
+
+h3,
+.h3{
+  font-size:28px;
+  font-weight:600;
+}
+
+h4,
+.h4{
+  font-size:24px;
+  font-weight:600;
+}
+
+h5,
+.h5{
+  font-size:20px;
+  font-weight:600;
+}
+
+h6,
+.h6{
+  font-size:18px;
+  font-weight:600;
+}
+
+p{
+  font-size:18px;
+  font-weight:400;
+  line-height:1.2;
+  color:var(--text);
+  font-family:'Montserrat', sans-serif;
+}
+
+
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-direction: column;
+  text-align: center;
+}
+/* =========================
+COMMON
+========================= */
+
+.container{
+  width: 100%;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+.paddingBlock{
+  padding-block:100px;
+}
+
+/* =========================
+1800
+========================= */
+
+@media screen and (min-width:1800px){
+
+  .container{
+    max-width:1640px;
+  }
+
+}
+
+/* =========================
+1800
+========================= */
+
+@media screen and (max-width:1800px){
+
+  .container{
+    max-width:1500px;
+  }
+
+  .paddingBlock{
+    padding-block:80px;
+  }
+
+  h1,
+  .h1{
+    font-size:56px;
+  }
+
+  h2,
+  .h2{
+    font-size:42px;
+  }
+
+  h3,
+  .h3{
+    font-size:32px;
+  }
+
+  h4,
+  .h4{
+    font-size:20px;
+  }
+
+}
+
+/* =========================
+1600
+========================= */
+
+@media screen and (max-width:1600px){
+
+  .container{
+    max-width:1320px;
+  }
+
+  h1,
+  .h1{
+    font-size:50px;
+  }
+
+  h2,
+  .h2{
+    font-size:40px;
+  }
+
+  h3,
+  .h3{
+    font-size:30px;
+  }
+  p{
+  font-size:16px;
+}
+
+
+}
+
+/* =========================
+1440
+========================= */
+
+@media screen and (max-width:1440px){
+
+  .container{
+    max-width:1140px;
+  }
+
+  .paddingBlock{
+    padding-block:60px;
+  }
+
+  h1,
+  .h1{
+    font-size:42px;
+  }
+
+  h2,
+  .h2{
+    font-size:38px;
+  }
+
+  h3,
+  .h3{
+    font-size:28px;
+  }
+
+  h4,
+  .h4{
+    font-size:18px;
+  }
+ p{
+    font-size:14px;
+  }
+}
+
+/* =========================
+1199
+========================= */
+
+@media screen and (max-width:1199px){
+
+  .container{
+    max-width:960px;
+  }
+
+  .paddingBlock{
+    padding-block:50px;
+  }
+
+  h1,
+  .h1{
+    font-size:36px;
+  }
+
+  h2,
+  .h2{
+    font-size:30px;
+  }
+
+  h3,
+  .h3{
+    font-size:26px;
+  }
+
+  p{
+    font-size:16px;
+  }
+
+}
+
+/* =========================
+991
+========================= */
+
+@media screen and (max-width:991px){
+
+  .container{
+    max-width:720px;
+  }
+
+  .paddingBlock{
+    padding-block:40px;
+  }
+h5,
+.h5{
+  font-size:18px;
+}
+
+}
+
+/* =========================
+767
+========================= */
+
+@media screen and (max-width:767px){
+
+  .container{
+    max-width:540px;
+  }
+
+  h1,
+  .h1{
+    font-size:32px;
+  }
+
+  h2,
+  .h2{
+    font-size:28px;
+  }
+
+  h3,
+  .h3{
+    font-size:24px;
+  }
+
+ 
+
+}
+
+/* =========================
+575
+========================= */
+
+@media screen and (max-width:575px){
+
+  .container{
+    max-width:100%;
+  }
+
+  h1,
+  .h1{
+    font-size:30px;
+  }
+
+  h2,
+  .h2{
+    font-size:24px;
+  }
+
+  h3,
+  .h3{
+    font-size:22px;
+  }
+
+  h4,
+  .h4{
+    font-size:18px;
+  }
+p{
+    font-size:14px;
+  }
+
+}
+
+/* =========================
+430
+========================= */
+
+@media screen and (max-width:430px){
+
+  h4,
+  .h4{
+    font-size:16px;
+  }
+
+  h5,
+  .h5{
+    font-size:18px;
+  }
+
+}
+
+/* =========================
+320
+========================= */
+
+@media screen and (max-width:320px){
+
+  h1,
+  .h1{
+    font-size:26px;
+  }
+
+  h2,
+  .h2{
+    font-size:22px;
+  }
+
+}

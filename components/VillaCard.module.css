@@ -1,0 +1,322 @@
+/* VillaCard.module.css */
+
+.card {
+  border-radius: 32px;
+  padding: 12px;
+  border: 1px solid var(--border-02);
+  overflow: hidden;
+  background: var(--white);
+  transition: box-shadow 0.3s ease;
+}
+
+
+.cardImg {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+  touch-action: pan-y;
+}
+
+.swiper {
+  width: 100%;
+  border-radius: 24px;
+  --swiper-pagination-bottom: 12px;
+}
+
+.cardImgEl {
+  width: 100% !important;
+  height: auto !important;
+  /* aspect-ratio: 1 / 1; */
+  object-fit: cover;
+  display: block;
+}
+
+
+.swiper :global(.swiper-slide) {
+  width: 100%;
+}
+
+
+.swiper :global(.swiper-pagination) {
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 4px;
+  border-radius: 56px;
+  width: 88px !important;
+  margin: 0 auto;
+  height: 12px;
+  background-color:#0000001A;
+}
+
+
+.swiper :global(.swiper-pagination-bullet) {
+  width: 17px;
+  height: 4px;
+  border-radius: 10px;
+  background:#00000033;
+  opacity: 1;           
+  margin: 0 !important; 
+  cursor: pointer;
+  transition: width 0.25s ease, border-radius 0.25s ease, background 0.25s ease;
+}
+
+
+.swiper :global(.swiper-pagination-bullet-active) {
+  background: var(--white);
+ 
+}
+
+
+.cardImgTop {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.cardRating,
+.cardLike {
+  pointer-events: auto;
+}
+
+.cardRating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--light-black);
+  backdrop-filter: blur(15.6px);
+  border-radius: 56px;
+  padding: 15px;
+  height: 46px;
+}
+
+.cardRating img {
+  width: 100%;
+  max-width: 13px;
+  height: auto;
+}
+
+.cardRating span {
+  font-size: 18px;
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.cardLike {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #0000001a;
+  backdrop-filter: blur(15.6px);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cardLike img {
+  width: 100%;
+  max-width: 16px;
+  height: auto;
+}
+
+
+.cardContent {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.cardName {
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.cardAddress {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.cardAddress img {
+  width: 100%;
+  max-width: 25px;
+  height: 24px;
+}
+
+.cardAddress p {
+  color: var(--black-opacity);
+  line-height: 1.2;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.cardAmenities {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--border-02);
+  border-radius: 60px;
+  padding: 12px 20px;
+  width: 100%;
+  background-color: var(--light-pink);
+  margin-bottom: 16px;
+}
+
+.pill {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  font-family: var(--font-montserrat);
+  color: var(--black);
+  text-align: center;
+}
+
+.pill:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;
+  background-color: var(--black-opacity);
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-02);
+}
+
+.cardPrice {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cardPrice h5 {
+  color: var(--black);
+  font-family: var(--font-montserrat);
+}
+
+.cardPrice p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--black-opacity);
+}
+
+.cardArrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border-02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.cardArrow img {
+  transition: all 0.25s ease;
+}
+
+.cardArrow:hover {
+  background: var(--black);
+  border-color: var(--black);
+}
+
+.cardArrow:hover img {
+  filter: brightness(0) invert(1);
+}
+
+
+@media screen and (max-width: 1600px) {
+  .cardAmenities {
+    padding: 12px 16px;
+  }
+  .pill {
+    font-size: 15px;
+  }
+  .cardContent {
+    padding: 16px 0;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .cardAmenities {
+    padding: 12px 14px;
+    gap: 8px;
+  }
+  .pill {
+    font-size: 14px;
+  }
+  .cardPrice p {
+    font-size: 14px;
+  }
+  .cardArrow {
+    width: 40px;
+    height: 40px;
+  }
+  .card {
+    border-radius: 16px;
+  }
+  .cardImg {
+    border-radius: 16px;
+  }
+  .swiper {
+    border-radius: 16px;
+  }
+  .cardRating {
+  height: 36px;
+}
+.cardRating span {
+  font-size: 16px;
+}
+.cardLike {
+  width: 36px;
+  height: 36px;
+}
+
+}
+
+@media screen and (max-width: 767px) {
+  .cardAddress p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .pill {
+    font-size: 13px;
+  }
+}
