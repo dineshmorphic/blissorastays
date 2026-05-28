@@ -63,7 +63,7 @@ const Listing = () => {
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const currentVillas = villas.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
-  const handlePageChange = (page) => {
+  const handlePageChange = (page: number) => {
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
       window.scrollTo({ top: 0, behavior: "smooth" });

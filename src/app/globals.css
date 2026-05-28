@@ -148,11 +148,9 @@ COMMON
 ========================= */
 
 @media screen and (min-width:1800px){
-
   .container{
-    max-width:1640px;
+    max-width:1640px; 
   }
-
 }
 
 /* =========================
