@@ -73,9 +73,14 @@
   font-weight: 400;
   line-height: 1.2;
   color: var(--dark-gray);
+   transition: all 0.3s ease;
 }
 
 
+
+.footerCol ul li a:hover {
+  color: var(--white);
+}
 
 
 .footerBottom {
