@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import styles from './Home.module.css'
+import SearchBox from '../../../../components/searchbox/Searchbox'
 
 const destinations = [
   'Goa, India',
@@ -80,7 +81,7 @@ const HeroBanner = () => {
           </div>
 
           
-          <div className={styles.searchBox}>
+          {/* <div className={styles.searchBox}>
 
            
             <div
@@ -209,7 +210,8 @@ const HeroBanner = () => {
               SEARCH
             </button>
 
-          </div>
+          </div> */}
+          <SearchBox/>
          
 
         </div>

@@ -1,0 +1,655 @@
+.Listing .listingRow{
+    display: grid;
+    grid-template-columns: 376px 1fr;
+    gap: 32px;
+}
+.listingGrid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 32px;
+}
+
+.filterPanel {
+  background:var(--white);
+  border-radius: 24px;
+  padding: 20px;
+  border: 1px solid var(--light-sky-border);
+  position: sticky;
+  top:120px;
+  height: fit-content;
+}
+
+.filterHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  border-bottom:1px solid var(--light-sky-border);
+  padding-bottom: 32px;
+}
+
+.filterTitle {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.clearAll {
+  background: none;
+  border: none;
+  font-family:'Montserrat', sans-serif;
+  font-size: 14px;
+  color:var(--black);
+  cursor: pointer;
+  padding: 0;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+
+
+
+.filterSection {
+  margin-bottom: 4px;
+}
+
+.sectionTitle {
+  color: var(--black);
+  margin-bottom: 16px;
+}
+
+
+.sliderWrapper {
+  margin-bottom: 20px;
+}
+
+.sliderTrack {
+  position: relative;
+  height: 4px;
+  background: var(--light-gray);
+  border-radius: 0px;
+  margin-bottom: 16px;
+}
+
+.sliderFill {
+  position: absolute;
+  height: 100%;
+  background: var(--black);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.rangeInput {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.rangeInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--black);
+  cursor: pointer;
+  pointer-events: all;
+  margin-top: 0px;
+
+ 
+}
+
+
+
+.rangeInput::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background:var(--black);
+  cursor: pointer;
+  pointer-events: all;
+  border: none;
+}
+
+.priceInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--light-sky-border);
+}
+
+.priceBox {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--light-gray);
+  border: 1px solid var(--light-sky-border);
+  border-radius: 40px;
+  padding: 11px 16px;
+}
+
+.rupee {
+  font-size: 14px;
+  color: var(--black);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.priceInput {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family:'Montserrat', sans-serif;
+  color: var(--dark-gray);
+  font-weight: 400;
+  width: 100%;
+  -moz-appearance: textfield;
+}
+
+.priceInput::-webkit-inner-spin-button,
+.priceInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Bedrooms Grid */
+.bedroomGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  row-gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--light-sky-border);
+}
+
+.bedroomBtn {
+  background: var(--light-gray);
+  border: 1px solid var(--light-sky-border);
+  border-radius: 40px;
+  height: 40px;
+  font-size: 14px;
+  font-family:'Montserrat', sans-serif;
+  font-weight: 400;
+  color: var(--dark-gray);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bedroomBtn:hover {
+  border-color: var(--black);
+  color:var(--black);
+}
+
+.bedroomActive {
+  background: var(--black) !important;
+  border-color:var(--black) !important;
+  color:var(--white) !important;
+}
+
+/* Amenities */
+.amenitiesList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkboxInput {
+  display: none;
+}
+
+.customCheckbox {
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--light-sky-border);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.checkboxRow:has(.checkboxInput:checked) .customCheckbox {
+  background: var(--black);
+  border-color: var(--black);
+}
+
+.checkboxLabel {
+  font-size: 14px;
+  color:var(--dark-gray);
+  line-height: 1.2;
+  font-weight: 400;
+  user-select: none;
+}
+
+.seeAll {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-family:'Montserrat', sans-serif;
+  color: var(--black);
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+  padding: 0;
+  
+  text-underline-offset: 2px;
+}
+
+.seeAll:hover {
+text-decoration: underline;
+  opacity: 0.7;
+}
+
+.sortingBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px ;
+}
+
+.resultTitle {
+  color: var(--black);
+  margin: 0;
+}
+
+.sortingRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Sort Dropdown */
+.sortDropdownWrapper {
+  position: relative;
+}
+
+.sortDropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background:var(--light-gray);
+  border: 1px solid var(--light-sky-border);
+  border-radius: 40px;
+  padding: 20px 32px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family:'Montserrat', sans-serif;
+  font-weight: 400;
+  color:var(--black);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+
+.sortDropdown img{
+  width: 24px;
+  height: 24px;
+}
+
+.sortLabel {
+  color: var(--dark-gray);
+  font-weight: 400;
+}
+
+.sortDivider {
+  color: var(--dark-gray);
+}
+
+.sortValue {
+  font-weight: 400;
+  color:var(--black);
+}
+
+.chevron {
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background:var(--white);
+  border: 1px solid var(--light-sky-border);
+  border-radius: 12px;
+  list-style: none;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+ 
+  z-index: 100;
+  animation: dropFade 0.15s ease;
+}
+
+@keyframes dropFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownItem {
+  padding: 9px 14px;
+  font-size: 14px;
+  font-family:'Montserrat', sans-serif;
+  color: var(--black);
+  cursor: pointer;
+  transition: background 0.15s;
+  font-weight: 400;
+}
+
+.dropdownItem:hover {
+  background:var(--light-gray);
+  color: var(--black);
+}
+
+.dropdownItemActive {
+  font-weight: 600;
+  color: var(--black);
+  background:var(--light-gray);
+}
+
+/* View Toggle */
+.viewToggle {
+  display: flex;
+  align-items: center;
+  background: var(--light-gray);
+  border-radius: 40px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.viewBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color:var(--black);
+  border-radius: 7px;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+   border-radius: 50%;
+}
+
+
+
+.viewBtnActive {
+  background:var(--black);
+  color:var(--white) ;
+}
+
+.searchBoxShadow{
+    box-shadow: 0px 8px 20px 0px #0000000D;
+    border-radius: 40px;
+    margin-bottom: 60px;
+}
+
+/* ── Pagination ─────────────────────────────────────────── */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.pageBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--light-sky-border);
+  background: var(--light-gray);
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  line-height: 1;
+}
+
+.pageBtn:hover:not(.disabled):not(.pageBtnActive) {
+  background: var(--light-gray);
+  border-color: var(--light-sky-border);
+}
+
+.pageBtnActive {
+  background: var(--black);
+  border-color: var(--black);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.pageBtnNav {
+  color: var(--black);
+}
+
+.pageBtnNav svg {
+  display: block;
+}
+
+.disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+@media screen and (max-width:1800px){
+  .searchBoxShadow{
+    border-radius: 30px;
+    margin-bottom: 40px;
+    margin-top: 80px;
+}
+.Listing .listingRow{
+    gap: 28px;
+}
+.sortingBar {
+  margin-bottom: 30px;
+}
+  .sortDropdown {
+  border-radius: 40px;
+  padding: 18px 28px;
+}
+.filterHeader {
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+}
+.priceInputs {
+ margin-bottom: 28px;
+  padding-bottom: 28px;
+}
+.bedroomGrid {
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+}
+.listingGrid{
+    gap: 28px;
+}
+.viewBtn {
+  width: 48px;
+  height: 48px;
+}
+
+.bedroomBtn {
+  border-radius: 30px;
+}
+
+}
+@media screen and (max-width:1600px){
+ .searchBoxShadow{
+    border-radius: 20px;
+    margin-bottom: 30px;
+     margin-top: 60px;
+}
+.Listing .listingRow{
+  grid-template-columns: 340px 1fr;
+    gap: 24px;
+}
+.sortingBar {
+  margin-bottom: 20px;
+}
+.sortDropdown {
+  padding: 16px 24px;
+}
+.filterHeader {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+.priceInputs {
+ margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+.bedroomGrid {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+.listingGrid{
+    gap: 24px;
+}
+.viewBtn {
+  width: 45px;
+  height: 45px;
+}
+.bedroomBtn {
+  border-radius: 20px;
+}
+}
+
+@media screen and (max-width:1440px){
+  .searchBoxShadow{
+    border-radius: 16px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+.Listing .listingRow{
+   grid-template-columns: 300px 1fr;
+    gap: 16px;
+}
+.sortDropdown {
+  padding: 14px 22px;
+  font-size: 14px;
+}
+.filterHeader {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.priceInputs {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.bedroomGrid {
+   margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.listingGrid{
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+}
+.bedroomBtn {
+  border-radius: 16px;
+}
+.pageBtn {
+  width: 35px;
+  height: 35px;
+}
+}
+@media screen and (max-width:1199px){
+  .filterHeader {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+}
+.priceInputs {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+}
+.bedroomGrid {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+}
+.sortDropdown {
+  padding: 14px 20px;
+}
+.Listing .listingRow{
+   grid-template-columns: 280px 1fr;
+}
+.searchBoxShadow{
+    margin-top: 80px;
+}
+.bedroomBtn {
+  border-radius: 8px;
+}
+}
+@media screen and (max-width:991px){
+  .Listing .listingRow{
+   grid-template-columns: 1fr;
+}
+.listingGrid{
+    grid-template-columns:1fr;
+}
+}
+@media screen and (max-width:767px){
+  .viewBtn {
+        width: 40px;
+        height: 40px;
+    }
+    .sortDropdown {
+        padding: 10px 20px;
+    }
+    .searchBoxShadow{
+    margin-top:50px;
+}
+}
+@media screen and (max-width:575px){
+  
+}
+@media screen and (max-width:430px){
+  .sortDropdown {
+        padding: 10px 14px;
+    }
+    .viewBtn {
+        width: 35px;
+        height: 35px;
+    }
+}
+@media screen and (max-width:321px){
+  
+}

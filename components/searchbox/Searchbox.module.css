@@ -1,0 +1,248 @@
+/* ── Search Box ── */
+.searchBox {
+  position: relative;
+  z-index: 100;
+  background: var(--white);
+  padding: 20px 24px;
+  border-radius: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 32px;
+  margin-top: 60px;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.searchItem {
+  position: relative;
+  background: var(--light-sky-border);
+  border-radius: 40px;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.searchItem:hover {
+  background: #e8e8e8;
+}
+
+.searchItem.active {
+  background: #e8e8e8;
+}
+
+.searchIcon {
+  width: 24px !important;
+  height: 24px !important;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.fieldValue {
+  flex: 1;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--dark-gray);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.fieldValue.placeholder {
+  color: var(--dark-gray);
+}
+
+.chevronIcon {
+  width: 24px !important;
+  height: 24px !important;
+  flex-shrink: 0;
+  object-fit: contain;
+  opacity: 0.5;
+  transition: transform 0.25s ease;
+}
+
+.chevronIcon.rotate {
+  transform: rotate(180deg);
+}
+
+.hiddenDate {
+  position: absolute;
+  opacity: 0;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 40px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+/* ── Dropdown ── */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  overflow: hidden;
+  animation: dropDown 0.2s ease;
+}
+
+@keyframes dropDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  font-size: 15px;
+  color: var(--black);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.dropdownItem:hover {
+  background: var(--light-gray);
+}
+
+.dropdownItem.selected {
+  background: var(--light-gray);
+  font-weight: 500;
+}
+
+/* ── Search Button ── */
+.searchBtn {
+  border: none;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 60px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+}
+
+.searchBtnIcon {
+  width: 18px !important;
+  height: 18px !important;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1);
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 1800px) {
+  .searchBox {
+    margin-top: 50px;
+    gap: 28px;
+    border-radius: 30px;
+  }
+  .searchItem {
+    padding: 18px 28px;
+    border-radius: 30px;
+  }
+  .searchBtn {
+    border-radius: 30px;
+    padding: 16px 28px;
+  }
+  .searchIcon {
+    width: 22px !important;
+    height: 22px !important;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .searchBox {
+    margin-top: 40px;
+    gap: 24px;
+    border-radius: 20px;
+  }
+  .searchItem {
+    padding: 18px 24px;
+    border-radius: 20px;
+  }
+  .fieldValue {
+    font-size: 16px;
+  }
+  .searchBtn {
+    border-radius: 20px;
+  }
+  .searchIcon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .searchBox {
+    gap: 20px;
+    border-radius: 16px;
+    padding: 20px;
+  }
+  .searchItem {
+    padding: 18px 20px;
+    border-radius: 16px;
+  }
+  .searchBtn {
+    border-radius: 16px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .searchBox {
+    gap: 12px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .searchItem {
+    padding: 12px 12px;
+  }
+  .searchBtn {
+    padding: 12px 12px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .searchBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .searchBtn {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .searchBox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .searchBox {
+    margin-top: 30px;
+  }
+  .fieldValue {
+    font-size: 14px;
+  }
+}

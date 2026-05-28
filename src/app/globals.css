@@ -181,7 +181,7 @@ COMMON
 
   h3,
   .h3{
-    font-size:32px;
+    font-size:26px;
   }
 
   h4,
@@ -213,7 +213,7 @@ COMMON
 
   h3,
   .h3{
-    font-size:30px;
+    font-size:24px;
   }
   p{
   font-size:16px;
@@ -248,7 +248,7 @@ COMMON
 
   h3,
   .h3{
-    font-size:28px;
+    font-size:22px;
   }
 
   h4,
@@ -258,6 +258,10 @@ COMMON
  p{
     font-size:14px;
   }
+  h5,
+.h5{
+  font-size:16px;
+}
 }
 
 /* =========================
@@ -286,7 +290,7 @@ COMMON
 
   h3,
   .h3{
-    font-size:26px;
+    font-size:20px;
   }
 
   p{
@@ -335,10 +339,7 @@ h5,
     font-size:28px;
   }
 
-  h3,
-  .h3{
-    font-size:24px;
-  }
+  
 
  
 
@@ -364,10 +365,7 @@ h5,
     font-size:24px;
   }
 
-  h3,
-  .h3{
-    font-size:22px;
-  }
+ 
 
   h4,
   .h4{

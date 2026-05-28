@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from './header/Header'
+import Footer from './footer/Footer'
 
 import { Montserrat, Playfair_Display } from "next/font/google";
 
@@ -32,7 +34,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${montserrat.variable} ${playfair.variable}`}>
-      <body>{children}</body>
+      <body>
+         <Header />
+        {children}
+         <Footer />
+        </body>
     </html>
   );
 }
